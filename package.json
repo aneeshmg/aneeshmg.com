@@ -8,7 +8,7 @@
   },
   "scripts": {
     "prestart": "",
-    "start": "cd docs && python -m SimpleHTTPServer",
+    "start": "python -m SimpleHTTPServer",
     "build": "zip -r docs.zip docs;node build.js",
     "restore": "unzip docs.zip",
     "deploy": "git push -u origin master",
