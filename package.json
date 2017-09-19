@@ -1,0 +1,35 @@
+{
+  "name": "aneeshmg.com",
+  "version": "1.0.0",
+  "description": "Source code and build configuration of my website.",
+  "main": "build.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "prestart": "",
+    "start": "cd docs && python -m SimpleHTTPServer",
+    "build": "zip -r docs.zip docs;node build.js",
+    "restore": "unzip docs.zip",
+    "deploy": "git push -u origin master",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aneeshmg/aneeshmg.com.git"
+  },
+  "author": "Aneesh MG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aneeshmg/aneeshmg.com/issues"
+  },
+  "homepage": "https://github.com/aneeshmg/aneeshmg.com#readme",
+  "dependencies": {
+    "clean-css": "^4.1.8",
+    "html-minifier": "^3.5.5",
+    "imagemin": "^5.3.1",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-pngquant": "^5.0.1",
+    "uglify-js": "^3.1.1"
+  }
+}
