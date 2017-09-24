@@ -89,4 +89,4 @@ gulp.task('pack-html', ['transport-html'], function () {
   });
 
 
-gulp.task('default', ['pack-js', 'pack-css', 'pack-html', 'pack-images'])
+gulp.task('default', ['pack-js', 'pack-css', 'pack-images'])
