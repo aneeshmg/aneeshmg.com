@@ -35,7 +35,7 @@ gulp.task('clean-images', function () {
 });
 
 gulp.task('pack-js', ['clean-js'], function () {	
-	return gulp.src('./src/js/*.js')
+	return gulp.src(['./src/js/trianglify.js', './src/js/main.js'])
         .pipe(concat('main.js'))
         .pipe(minify({
             ext:{
