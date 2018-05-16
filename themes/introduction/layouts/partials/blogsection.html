@@ -1,0 +1,53 @@
+<div class="container" style="background-image: url('/img/blog.jpeg');height:85vh;background-size: cover;"> <!-- Begin Blog container -->
+
+{{ if .Site.Params.showLatest }}
+<h2 class="title is-2 has-text-centered">Latest Post</h2>
+    {{ range first 1 (where .Data.Pages.ByPublishDate.Reverse "Section" "blog") }}
+    <div class="summary">{{ .Date.Format (.Site.Params.dateForm | default "Jan 02, 2006") }}
+        <h3 class="title is-3 latest-post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <div class="markdown">
+            {{ .Summary }}
+            {{ if .Truncated }}
+            <a href="{{ .RelPermalink }}">...Read More</a>
+            {{ end }}
+            </div>
+    </div>
+    {{ end }}
+{{ end }}
+
+{{ if .Site.Params.showAllPosts }}
+<h2 class="title is-2 has-text-centered top-pad">All Posts</h2>
+    <ul>
+    {{ range .Data.Pages.ByPublishDate }}
+        {{ if eq .Section "blog" }}
+            {{ partial "li.html" . }}
+        {{ end }}
+    {{ end }}
+    </ul>
+{{ else }}
+<div class="container has-text-centered">
+    <h2 class="title is-2 has-text-centered bottom-pad">
+        <a href="#blog">BLOG SECTION</a>
+    </h2>
+</div>
+{{ end }}
+
+{{ if .Site.Params.showBlogButton }}
+<h3 class="title is-3 has-text-centered top-pad">I maintain a 
+    <a href="https://reads.aneeshmg.com" target="_blank">list</a> 
+    of the stuff I enjoy reading, watching, or learning from called 
+    <a href="https://reads.aneeshmg.com" target="_blank">
+        where the knowledge is.</a></h3>
+{{ end }}
+
+{{ if .Site.Params.showReadsButton }}
+<h3 class="title is-3 has-text-centered top-pad">
+    <a href="https://blog.aneeshmg.com" target="_blank">Here</a> 
+    is where I occassionally write
+</h3>
+{{ end }}
+
+<!-- <img class="img-responsive has-text-centered" src="/img/blog1.jpeg">  -->
+</div><!-- End Blog container -->
+
+<div class="container has-text-centered top-pad"><a href="#top"><i class="fa fa-arrow-up"></i></a></div>
