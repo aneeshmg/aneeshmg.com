@@ -1,0 +1,22 @@
+{
+  "name": "aneeshmg.com",
+  "version": "2.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aneeshmg/aneeshmg.com.git"
+  },
+  "author": "Aneesh M Gangadhar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aneeshmg/aneeshmg.com/issues"
+  },
+  "homepage": "https://github.com/aneeshmg/aneeshmg.com#readme",
+  "dependencies": {
+    "lite-server": "^2.4.0"
+  }
+}
