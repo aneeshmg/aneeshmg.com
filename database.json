@@ -1,0 +1,305 @@
+{
+    "basics": {
+        "name": "Aneesh M Gangadhar",
+        "label": "Graduate Student",
+        "picture": "img/profile.jpg",
+        "email": "aneesh.mg2007@gmail.com",
+        "phone": "(480) XXX-XXXX",
+        "website": "https://aneeshmg.com",
+        "summary": "My summary goes here...",
+        "location": {
+            "address": "1700 E Don Carlos Ave",
+            "postalCode": "85281",
+            "city": "Tempe",
+            "state": "AZ",
+            "countryCode": "US",
+            "region": "Arizona"
+        },
+        "profiles": [{
+                "network": "Twitter",
+                "username": "mg_aneesh",
+                "url": "http://twitter.com/mg_aneesh"
+            },
+            {
+                "network": "Facebook",
+                "username": "aneeshmg",
+                "url": "http://twitter.com/mg_aneesh"
+            },
+            {
+                "network": "Linkedin",
+                "username": "john",
+                "url": "http://twitter.com/mg_aneesh"
+            },
+            {
+                "network": "Github",
+                "username": "aneeshmg",
+                "url": "http://twitter.com/mg_aneesh"
+            },
+            {
+                "network": "Stackoverflow",
+                "username": "john",
+                "url": "http://twitter.com/mg_aneesh"
+            }
+        ]
+    },
+    "work": [{
+            "company": "Arizona State University",
+            "position": "System Suport Specialist (IT)",
+            "website": "http://asu.edu",
+            "startDate": "2018-12-17",
+            "endDate": "Present",
+            "summary": "Description...",
+            "highlights": [
+                "Started the company"
+            ]
+        },
+        {
+            "company": "Arizona State University",
+            "position": "Computing Support (IT)",
+            "website": "http://asu.edu",
+            "startDate": "2018-08-22",
+            "endDate": "2018-12-17",
+            "summary": "Description...",
+            "highlights": [
+                "Started the company"
+            ]
+        },
+        {
+            "company": "Tesco Bengaluru",
+            "position": "Senior Software Engineer",
+            "website": "http://tesco.com",
+            "startDate": "2017-04-15",
+            "endDate": "2018-04-30",
+            "summary": "Description...",
+            "highlights": [
+                "Started the company"
+            ]
+        },
+        {
+            "company": "Tesco Bengaluru",
+            "position": "Software Engineer",
+            "website": "http://tesco.com",
+            "startDate": "2016-09-07",
+            "endDate": "2017-04-15",
+            "summary": "Description...",
+            "highlights": [
+                "Started the company"
+            ]
+        },
+        {
+            "company": "Tesco Bengaluru",
+            "position": "Graduate Software Engineer",
+            "website": "http://tesco.com",
+            "startDate": "2015-09-07",
+            "endDate": "2016-09-07",
+            "summary": "Description...",
+            "highlights": [
+                "Started the company"
+            ]
+        }
+    ],
+    "volunteer": [{
+        "organization": "Organization",
+        "position": "Volunteer",
+        "website": "http://organization.com/",
+        "startDate": "2012-01-01",
+        "endDate": "2013-01-01",
+        "summary": "Description...",
+        "highlights": [
+            "Awarded 'Volunteer of the Month'"
+        ]
+    }],
+    "education": [{
+            "institution": "Arizona State University",
+            "area": "Computer Science",
+            "studyType": "Masters",
+            "startDate": "2018-08-16",
+            "endDate": "2020-05-06",
+            "gpa": {
+                "score": "3.33",
+                "scale": "4.0"
+            },
+            "courses": [
+                "DB1101 - Basic SQL"
+            ]
+        },
+        {
+            "institution": "National Institute of Engineering",
+            "city": "Mysore",
+            "area": "Information Science and Engineering",
+            "studyType": "Bachelor",
+            "startDate": "2011-09-05",
+            "endDate": "2015-06-30",
+            "gpa": {
+                "score": "8.11",
+                "scale": "10.0"
+            },
+            "courses": [
+                "DB1101 - Basic SQL"
+            ]
+        }
+    ],
+    "awards": [{
+        "title": "Award",
+        "date": "2014-11-01",
+        "awarder": "Company",
+        "summary": "There is no spoon."
+    }],
+    "publications": [{
+        "name": "Publication",
+        "publisher": "Company",
+        "releaseDate": "2014-10-01",
+        "website": "http://publication.com",
+        "summary": "Description..."
+    }],
+    "technicalSkills": {
+        "languages": [{
+                "name": "Javascript",
+                "rating": "9"
+            },
+            {
+                "name": "Java",
+                "rating": "8"
+            },
+            {
+                "name": "C",
+                "rating": "6"
+            },
+            {
+                "name": "C++",
+                "rating": "5"
+            },
+            {
+                "name": "PHP",
+                "rating": "7"
+            },
+            {
+                "name": "SQL",
+                "rating": "8"
+            },
+            {
+                "name": "HTML",
+                "rating": "9"
+            },
+            {
+                "name": "CSS",
+                "rating": "9"
+            },
+            {
+                "name": "C#",
+                "rating": "6"
+            },
+            {
+                "name": "Python",
+                "rating": "7"
+            },
+            {
+                "name": "Shell",
+                "rating": "6"
+            }
+        ],
+        "databases": [{
+                "name": "MySQL",
+                "rating": "8"
+            },
+            {
+                "name": "MongoDB",
+                "rating": "7"
+            },
+            {
+                "name": "SQLite",
+                "rating": "6"
+            }
+        ],
+        "toolsAndTechnologies": [{
+                "name": "NodeJS",
+                "rating": "9"
+            },
+            {
+                "name": "Android",
+                "rating": "7"
+            },
+            {
+                "name": "AWS",
+                "rating": "7"
+            },
+            {
+                "name": "Git",
+                "rating": "8"
+            },
+            {
+                "name": "Photoshop",
+                "rating": "6"
+            },
+            {
+                "name": "Jenkins",
+                "rating": "8"
+            },
+            {
+                "name": "Apache",
+                "rating": "8"
+            },
+            {
+                "name": "Moodle",
+                "rating": "8"
+            },
+            {
+                "name": "D3",
+                "rating": "6"
+            },
+            {
+                "name": "R",
+                "rating": "5"
+            },
+            {
+                "name": "Bash",
+                "rating": "7"
+            }
+        ],
+        "operatingSystems": [{
+                "name": "OSX",
+                "rating": "8"
+            },
+            {
+                "name": "Ubuntu",
+                "rating": "9"
+            },
+            {
+                "name": "Windows",
+                "rating": "8"
+            }
+        ]
+    },
+    "languages": [{
+            "language": "English",
+            "fluency": "Fluent"
+        },
+        {
+            "language": "Kannada",
+            "fluency": "Native speaker"
+        },
+        {
+            "language": "Hindi",
+            "fluency": "Conversational"
+        },
+        {
+            "language": "Tulu",
+            "fluency": "Native speaker"
+        },
+        {
+            "language": "Sanskrit",
+            "fluency": "Beginner"
+        }
+    ],
+    "interests": [{
+        "name": "Wildlife",
+        "keywords": [
+            "Ferrets",
+            "Unicorns"
+        ]
+    }],
+    "references": [{
+        "name": "Jane Doe",
+        "reference": "Reference..."
+    }]
+}
