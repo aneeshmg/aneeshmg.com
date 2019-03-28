@@ -1,6 +1,6 @@
 {
     "basics": {
-        "name": "Aneesh M Gangadhar",
+        "name": "Aneesh Megravalli Gangadhar",
         "label": "Graduate Student",
         "picture": "img/profile.jpg",
         "email": "aneesh.mg2007@gmail.com",
@@ -22,23 +22,23 @@
             },
             {
                 "network": "Facebook",
-                "username": "aneeshmg",
-                "url": "http://twitter.com/mg_aneesh"
+                "username": "aneesh.mg",
+                "url": "https://www.facebook.com/Aneesh.MG"
             },
             {
                 "network": "Linkedin",
-                "username": "john",
-                "url": "http://twitter.com/mg_aneesh"
+                "username": "aneeshmg",
+                "url": "https://www.linkedin.com/in/aneeshmg/"
             },
             {
                 "network": "Github",
                 "username": "aneeshmg",
-                "url": "http://twitter.com/mg_aneesh"
+                "url": "https://github.com/aneeshmg"
             },
             {
                 "network": "Stackoverflow",
-                "username": "john",
-                "url": "http://twitter.com/mg_aneesh"
+                "username": "aneeshmg",
+                "url": "https://stackoverflow.com/users/2058933/aneeshmg"
             }
         ]
     },
@@ -120,7 +120,12 @@
                 "scale": "4.0"
             },
             "courses": [
-                "DB1101 - Basic SQL"
+                "CSE 230 - Computer Organization/Assembly level programming",
+                "CSE 355 - Introduction to Theory of Computation",
+                "CSE 551 - Foundation of Algorithms",
+                "CSE 573 - Semantic Web Mining",
+                "CSE 576 - Natural Language Processing",
+                "CSE 578 - Data Visualization"
             ]
         },
         {
@@ -254,6 +259,14 @@
             {
                 "name": "Bash",
                 "rating": "7"
+            },
+            {
+                "name": "Cordova",
+                "rating": "7"
+            },
+            {
+                "name": "Raspberry Pi",
+                "rating": "5"
             }
         ],
         "operatingSystems": [{
@@ -270,6 +283,121 @@
             }
         ]
     },
+    "projects": [
+        {
+            "name": "SanchariMitra",
+            "description": "An Intra-city Route Management System-Sanchari Mitra",
+            "keywords": [
+                "crossplatform",
+                "PHP",
+                "JSON",
+                "Cordova",
+                "Javascript",
+                "Bootstrap",
+                "Android",
+                "mobile",
+                "app",
+                "ios"
+            ],
+            "url": "#",
+            "year": "2015"
+        },
+        {
+            "name": "Baray",
+            "description": "A minimalistic logger for NodeJS applications",
+            "keywords": [
+                "nodejs",
+                "npm",
+                "logger",
+                "streams",
+                "minimalistic",
+                "simple",
+                "Javascript"
+            ],
+            "url": "https://www.npmjs.com/package/baray",
+            "year": "2017"
+        },
+        {
+            "name": "ASU Class Notifier",
+            "description": "A chatbot on kik to notify users when requested classes are available for registration.",
+            "keywords": [
+                "nodejs",
+                "Javascript",
+                "heroku",
+                "chatbot",
+                "kik",
+                "cloud",
+                "asu"
+            ],
+            "url": "https://www.npmjs.com/package/baray",
+            "year": "2017"
+        },
+        {
+            "name": "BunkersGuide",
+            "description": "A simple attendance tracking application - for students",
+            "keywords": [
+                "android",
+                "attendance",
+                "mobile",
+                "app"
+            ],
+            "url": "#",
+            "year": "2013"
+        },
+        {
+            "name": "Shabd",
+            "description": "An android app to enable registrations and marketing of the event \"Shabd-13\" held at Sri Jaychamarajendra College of Engineering, Mysore.",
+            "keywords": [
+                "android",
+                "cultural",
+                "fest",
+                "mobile",
+                "app"
+            ],
+            "url": "#",
+            "year": "2013"
+        },
+        {
+            "name": "SIC 2-phase assembler",
+            "description": "A 2-phase assembler for the SIC architecture",
+            "keywords": [
+                "SIC",
+                "assembler",
+                "cpp",
+                "computer organization"
+            ],
+            "url": "#",
+            "year": "2013"
+        },
+        {
+            "name": "Mazaak",
+            "description": "A Jokes-as-a-service (JaaS) API written in NodeJS to grok it",
+            "keywords": [
+                "api",
+                "mongodb",
+                "nosql",
+                "nodejs",
+                "jokes"
+            ],
+            "url": "#",
+            "year": "2017"
+        },
+        {
+            "name": "Medical Named Entity Recognition and Assertion Extraction",
+            "description": "An NLP course project - to recognise named entities and extract their assertions from electronic medical records",
+            "keywords": [
+                "python",
+                "bilstm",
+                "neural networks",
+                "emr",
+                "medical",
+                "named entities",
+                "assertion extraction"
+            ],
+            "url": "#",
+            "year": "2018"
+        }
+    ],
     "languages": [{
             "language": "English",
             "fluency": "Fluent"
@@ -292,10 +420,35 @@
         }
     ],
     "interests": [{
-        "name": "Wildlife",
+        "name": "Critical thinking",
         "keywords": [
             "Ferrets",
             "Unicorns"
+        ]
+    },
+    {
+        "name": "Martial arts",
+        "keywords": [
+            "Muay Thai",
+            "Boxing",
+            "Tae-kwon-Do",
+            "MMA"
+        ]
+    },
+    {
+        "name": "Fitness",
+        "keywords": [
+            "Cycling",
+            "Yoga",
+            "Running"
+        ]
+    },
+    {
+        "name": "Photography enthusiast",
+        "keywords": [
+            "DSLR",
+            "Nikon",
+            "D5200"
         ]
     }],
     "references": [{
