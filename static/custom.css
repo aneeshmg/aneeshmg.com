@@ -1,0 +1,12 @@
+* {
+    font-family: monospace;
+}
+
+a img {
+    transition: .2s;
+}
+
+a img:hover {
+    transition: .3s;
+    transform: scale(1.2);
+}

@@ -1,6 +1,11 @@
 *.log
-node_modules
+node_modules/*
 *.lock
 package-lock.json
-docs.zip
 .DS_Store
+
+
+!node_modules/@lekoarts*
+.cache
+**/.cache
+public

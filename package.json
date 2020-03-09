@@ -1,9 +1,9 @@
 {
   "private": true,
-  "name": "cara",
-  "description": "Playful and Colorful One-Page portfolio featuring Parallax effects and animations",
+  "name": "aneeshmg.com",
+  "description": "Source code of my website",
   "version": "0.0.25",
-  "author": "LekoArts <hello@lekoarts.de>",
+  "author": "Aneesh Gangadhar",
   "license": "MIT",
   "starter-name": "gatsby-starter-portfolio-cara",
   "scripts": {
