@@ -10,3 +10,56 @@ a img:hover {
     transition: .3s;
     transform: scale(1.2);
 }
+
+.play {
+    font-size: .4em;
+    color: grey;
+    transition: .2s;
+    cursor: pointer;
+}
+.play:hover {
+    color: white;
+    transition: .3s;
+    transform: scale(1.3);
+}
+
+#box-timeline {
+    padding: 5%;
+    background-color: rgba(255, 255, 255, .3);
+    transition: .2s;
+}
+#box-timeline:hover {
+    background-color: rgba(240, 250, 240, 1);
+    transition: .3s;
+}
+
+#timeline {
+    transition: .2s;
+}
+
+#timeline:hover {
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+#box-skills {
+    padding: 1%;
+    background-color: rgba(255, 255, 255, .3);
+    transition: .2s;
+    height: 500px;
+}
+
+#box-skills:hover {
+    background-color: rgba(240, 248, 255, 1);
+    transition: .3s;
+}
+
+#languages {
+    border-right: 2px solid grey;
+    width: 50%;
+}
+
+#skills {
+    border-left: 2px solid grey;
+    width: 50%;
+}
