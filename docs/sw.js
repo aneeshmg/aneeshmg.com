@@ -24,7 +24,38 @@ workbox.clientsClaim();
  * requests for URLs in the manifest.
  * See https://goo.gl/S9QRab
  */
-self.__precacheManifest = [].concat(self.__precacheManifest || []);
+self.__precacheManifest = [
+  {
+    "url": "webpack-runtime-c7b1adce176be7c256e7.js"
+  },
+  {
+    "url": "commons-888c9dc189c564b25dd6.js"
+  },
+  {
+    "url": "app-f05d068fe9d1e8468462.js"
+  },
+  {
+    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-49ac284587dff2030b81.js"
+  },
+  {
+    "url": "offline-plugin-app-shell-fallback/index.html",
+    "revision": "f8d6e9f34635135a457a51475daa85ec"
+  },
+  {
+    "url": "libs/dimple.min.js"
+  },
+  {
+    "url": "custom.js"
+  },
+  {
+    "url": "manifest.json",
+    "revision": "b773e901ef06ac93343dc05e67540787"
+  },
+  {
+    "url": "manifest.webmanifest",
+    "revision": "fa3ce0b9d57766db9c13c056bcd8113c"
+  }
+].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
