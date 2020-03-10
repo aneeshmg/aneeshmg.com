@@ -13,7 +13,7 @@ export default function HTML(props) {
         />
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script src="https://d3js.org/d3.v4.min.js"></script>
-        <script src="https://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
+        <script src="/dimple.min.js"></script>
         <script src="/custom.js"></script>
         {props.headComponents}
       </head>
