@@ -1,9 +1,0 @@
-const React = require("react")
-
-export const onRenderBody = ({ setHeadComponents }, pluginOptions) => {
-  setHeadComponents([
-    <script
-      href="/custom.js"
-    />,
-  ])
-}
