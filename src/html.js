@@ -12,8 +12,8 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <script src="http://d3js.org/d3.v4.min.js"></script>
-        <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="https://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
         <script src="/custom.js"></script>
         {props.headComponents}
       </head>
