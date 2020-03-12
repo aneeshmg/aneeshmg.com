@@ -58,7 +58,7 @@ const init = () => {
     languagesChart.setBounds(80, 10, '80%', '90%')
     languagesChart.addCategoryAxis("y", "Language")
     languagesChart.addMeasureAxis("x", "Expertise")
-    languagesChart.addColorAxis("Expertise", ["#C4D79B", "#DA9694"])
+    languagesChart.addColorAxis("Expertise", ["#DA9694", "#C4D79B"])
     languagesChart.addSeries(null, dimple.plot.bar)
     languagesChart.draw()
 
