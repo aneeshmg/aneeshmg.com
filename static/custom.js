@@ -3,8 +3,6 @@ const gangadharAudio = new Audio('/audio/gangadhar.mp3')
 
 const init = () => {
 
-    console.log("loaded")
-
     const aneeshAudioButton = document.getElementById('aneesh')
     const gangadharAudioButton = document.getElementById('gangadhar')
 
