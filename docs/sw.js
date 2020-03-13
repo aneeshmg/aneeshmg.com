@@ -26,7 +26,7 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-c7b1adce176be7c256e7.js"
+    "url": "webpack-runtime-460fa42d6b387de0337b.js"
   },
   {
     "url": "commons-888c9dc189c564b25dd6.js"
@@ -39,7 +39,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "f8d6e9f34635135a457a51475daa85ec"
+    "revision": "65b3fa958a270b09324aef3758b6b178"
   },
   {
     "url": "libs/dimple.min.js"
