@@ -7,8 +7,12 @@ module.exports = {
     // You can overwrite values here that are used for the SEO component
     // Of course you can also add new values here to query them like usual
     // See all options: https://github.com/LekoArts/gatsby-themes/blob/master/themes/gatsby-theme-cara/gatsby-config.js
+    // Used for the title template on pages other than the index site
+    siteTitle: `Aneesh Gangadhar`,
     siteTitleAlt: `Aneesh Gangadhar`,
+    siteTitleAlt: `Come know me`,
     siteUrl: `https://aneeshmg.com/`,
+    siteLanguage: `en`,
     author: `Aneesh Gangadhar`,
   },
   plugins: [
