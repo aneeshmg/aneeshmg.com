@@ -10,7 +10,7 @@ module.exports = {
     // Used for the title template on pages other than the index site
     siteTitle: `Aneesh Gangadhar`,
     siteTitleAlt: `Aneesh Gangadhar`,
-    siteTitleAlt: `Come know me`,
+    siteDescription: `Come know me`,
     siteUrl: `https://aneeshmg.com/`,
     siteLanguage: `en`,
     author: `Aneesh Gangadhar`,
