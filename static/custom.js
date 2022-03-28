@@ -1,6 +1,8 @@
 const aneeshAudio = new Audio('/audio/aneesh.mp3')
 const gangadharAudio = new Audio('/audio/gangadhar.mp3')
 
+let links
+
 const init = () => {
 
     const aneeshAudioButton = document.getElementById('aneesh')
@@ -74,6 +76,13 @@ const init = () => {
         skillsChart.draw()
     })
 
+    document.getElementById('interesting').onclick = () => window.open(links[Math.floor(Math.random() * (links.length + 1) + 0)], "_blank")
+
 }
+
+fetch("https://gist.githubusercontent.com/aneeshmg/7282d2a9af0f4a3036293aa9afe9df3b/raw/01bce2531ad6e43fa62e50a045fe8039fb3b7534/boredom-sites")
+    .then(async res => {
+        links = await res.json()
+    })
 
 setTimeout(init, 500)

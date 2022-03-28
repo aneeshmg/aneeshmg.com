@@ -63,3 +63,19 @@ a img:hover {
     border-left: 2px solid grey;
     width: 50%;
 }
+
+#interesting {
+    font-size: 1em;
+    margin-left: 20%;
+    transition: .3s;
+    color: rgb(246, 173, 85);
+    border: 1px solid #555;
+    padding: 10px;
+}
+
+#interesting:hover {
+    transition: .3s;
+    cursor: pointer;
+    color: #111;
+    background-color: rgb(256, 183, 95)
+}
