@@ -1,0 +1,39 @@
+---
+// Polymath dial: a pointer over a ring of stops, one per interest, drawn in the annotations' dots and hairlines.
+// Drag, scroll, arrow keys or click a stop to tune; it snaps to the nearest stop. Without JS it shows the first interest.
+import { interests } from "../data/site";
+
+const n = interests.length;
+const at = (i: number, of: number, r: number) => {
+  const a = (i / of) * Math.PI * 2;
+  return { x: 120 + r * Math.sin(a), y: 120 - r * Math.cos(a) };
+};
+const stops = interests.map((it, i) => ({ ...it, i, ...at(i, n, 104) }));
+const ticks = Array.from({ length: 60 }, (_, i) => ({ big: i % 5 === 0, a: at(i, 60, 112), b: at(i, 60, i % 5 === 0 ? 119 : 116) }));
+const first = interests[0];
+---
+
+<div class="dial rv" data-interests={JSON.stringify(interests)} data-lenis-prevent>
+  <div class="knob-wrap"
+    role="slider" tabindex="0" aria-labelledby="dial-h"
+    aria-valuemin="0" aria-valuemax={n - 1} aria-valuenow="0" aria-valuetext={`${first.name}: ${first.line}`}
+    style={`--c:var(--c-${first.practice})`}>
+    <svg viewBox="0 0 240 240" aria-hidden="true">
+      {ticks.map((t) => <line class:list={["tick", { big: t.big }]} x1={t.a.x} y1={t.a.y} x2={t.b.x} y2={t.b.y} />)}
+      <circle class="ring" cx="120" cy="120" r="104" />
+      <circle class="ring in" cx="120" cy="120" r="62" />
+      {stops.map((s) => <circle class:list={["stop", { on: s.i === 0 }]} cx={s.x} cy={s.y} r="4.5" data-i={s.i} />)}
+      <g class="knob">
+        <line class="pointer" x1="120" y1="116" x2="120" y2="22" />
+        <circle class="pointer-dot" cx="120" cy="58" r="2.5" />
+      </g>
+      <circle class="hub" cx="120" cy="120" r="3" />
+    </svg>
+  </div>
+  <div>
+    <p class="k" id="dial-h">Currently tuned to</p>
+    <p class="nm">{first.name}</p>
+    <p class="ln1">{first.line}</p>
+    <p class="how">Drag, scroll or use arrow keys</p>
+  </div>
+</div>

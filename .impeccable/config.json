@@ -1,0 +1,56 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "tight-leading",
+        "value": "*",
+        "files": [
+          "src/styles/global.css",
+          "src/pages/index.astro",
+          "src/pages/404.astro",
+          "src/pages/books/optimal-living.astro",
+          "src/components/Shelf.astro",
+          "dist/index.html",
+          "dist/404.html",
+          "dist/books/optimal-living/index.html"
+        ],
+        "createdAt": "2026-11-08T05:01:00.737903Z",
+        "reason": "Claude: only display ledes (1.2-1.6rem) use 1.2 leading; body copy is 1.65"
+      },
+      {
+        "rule": "wide-tracking",
+        "value": "*",
+        "files": [
+          "src/styles/global.css",
+          "src/pages/index.astro",
+          "src/pages/404.astro",
+          "src/pages/books/optimal-living.astro",
+          "src/components/Shelf.astro",
+          "dist/index.html",
+          "dist/404.html",
+          "dist/books/optimal-living/index.html"
+        ],
+        "createdAt": "2026-11-08T05:01:00.737903Z",
+        "reason": "Claude: tracking is only on short uppercase labels (.idx section labels, the Scroll cue), uppercased by text-transform"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "src/styles/global.css",
+          "src/pages/index.astro",
+          "src/pages/404.astro",
+          "src/pages/books/optimal-living.astro",
+          "src/components/Shelf.astro",
+          "dist/index.html",
+          "dist/404.html",
+          "dist/books/optimal-living/index.html"
+        ],
+        "createdAt": "2026-11-08T05:01:00.737903Z",
+        "reason": "Claude: .cv is a book spine; its vertical title is centred inside the outline by flexbox, not flush"
+      }
+    ]
+  }
+}

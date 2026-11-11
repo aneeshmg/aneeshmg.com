@@ -1,0 +1,26 @@
+---
+import Base from "../../layouts/Base.astro";
+import { book, person } from "../../data/site";
+---
+
+<Base title={`${book.title}, a book by ${person.name}`} description={book.blurb[0]} tint="author">
+  <section class="ch page" style="--c:var(--c-author)">
+    <article class="txt">
+      <nav class="crumb rv" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/#author">Author</a></nav>
+      <h1 class="rv">{book.title}</h1>
+      <div class="book big rv">
+        <div class="cover-art" role="img" aria-label={`${book.title}, by ${person.name}`}><b>{book.title}</b><small>{person.name}</small></div>
+        <div>
+          {book.blurb.map((p) => <p class="lede">{p}</p>)}
+          {book.buyLinks.length ? (
+            <ul class="spec" aria-label="Where to buy">
+              {book.buyLinks.map((l) => <li><a href={l.href} rel="noopener" target="_blank">{l.label}</a></li>)}
+            </ul>
+          ) : (
+            <p class="also">{book.releaseNote}</p>
+          )}
+        </div>
+      </div>
+    </article>
+  </section>
+</Base>

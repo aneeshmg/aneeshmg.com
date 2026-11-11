@@ -1,0 +1,58 @@
+---
+// ON HOLD (2026-10-29): "The 3 a.m. test" hero widget. Not rendered anywhere.
+// To activate, render <ThreeAm /> in place of <Dial /> in src/pages/index.astro.
+// Its styles live below; its script is the `three` block in src/scripts/site.ts. Restyle both to the current design before reviving.
+import { mailKey, topics } from "../data/site";
+
+const ticks = Array.from({ length: 12 }, (_, i) => i);
+---
+
+<!-- The 3 a.m. test: the clock shows the visitor's time; picking a subject sweeps it to 3:00. -->
+    <aside class="three rv" aria-labelledby="three-h" data-topics={JSON.stringify(topics)} >
+      <button class="clock-btn" type="button" aria-label="Pick another subject">
+        <svg class="clock" viewBox="0 0 200 200" aria-hidden="true">
+          <circle class="face" cx="100" cy="100" r="86" />
+          <circle class="rim" cx="100" cy="100" r="86" />
+          {ticks.map((i) => {
+            const a = (i * 30 * Math.PI) / 180, r1 = i % 3 ? 72 : 64;
+            return <line class:list={["tick", { big: i % 3 === 0, three: i === 3 }]} x1={100 + r1 * Math.sin(a)} y1={100 - r1 * Math.cos(a)} x2={100 + 78 * Math.sin(a)} y2={100 - 78 * Math.cos(a)} />;
+          })}
+          <g class="hand hh"><line x1="100" y1="106" x2="100" y2="58" /></g>
+          <g class="hand mh"><line x1="100" y1="110" x2="100" y2="32" /></g>
+          <circle class="pin" cx="100" cy="100" r="3.5" />
+        </svg>
+      </button>
+      <p class="k" id="three-h">The 3 a.m. test</p>
+      <p class="q">Wake me at 3 a.m. and ask about <span class="topic" aria-live="polite">{topics[0]}</span>.</p>
+      <div class="acts">
+        <button class="shuffle" type="button">Pick another subject</button>
+        <a class="ask" href="#hello" data-mail={mailKey} data-subject={`3 a.m. question: ${topics[0]}`}>Ask me</a>
+      </div>
+    </aside>
+
+<style is:global>
+/* ON HOLD, see src/components/ThreeAm.astro. The 3 a.m. test: a line-drawn clock (visitor's local time) plus a subject to talk about. */
+.three { width: clamp(230px, 20vw, 300px); }
+.clock-btn { display: block; width: 100%; padding: 0; background: none; border: 0; cursor: pointer; border-radius: 50%; }
+.clock { display: block; width: 100%; color: var(--ink); overflow: visible; }
+.clock .face { fill: color-mix(in srgb, var(--accent) 12%, transparent); transition: fill .4s; }
+.clock-btn:hover .face { fill: color-mix(in srgb, var(--accent) 22%, transparent); }
+.clock .rim { fill: none; stroke: currentColor; stroke-width: 1.2; }
+.clock .tick { stroke: currentColor; stroke-width: 1; stroke-linecap: round; opacity: .45; }
+.clock .tick.big { opacity: .9; }
+.clock .tick.three { stroke: var(--accent); stroke-width: 2.4; opacity: 1; }
+.clock .hand { transform-origin: 100px 100px; transition: transform 1.4s cubic-bezier(.65, 0, .35, 1); }
+.clock .hand line { stroke: currentColor; stroke-linecap: round; }
+.clock .hh line { stroke-width: 2.6; }
+.clock .mh line { stroke-width: 1.4; }
+.clock .pin { fill: var(--accent); }
+.three .k { font-size: .85rem; color: var(--muted); margin-top: 1.25rem; }
+.three .q { font-size: clamp(1.05rem, 1.25vw, 1.25rem); font-weight: 300; line-height: 1.4; margin-top: .2rem; }
+.three .topic { display: inline-block; color: var(--ink); font-weight: 400; transition: opacity .35s, transform .45s var(--ease); }
+.three .topic.swap { opacity: 0; transform: translateY(6px); }
+.three .acts { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1.25rem; margin-top: 1rem; font-size: .9rem; }
+.shuffle { background: none; border: 1px solid var(--line); border-radius: 999px; padding: .5rem .95rem; cursor: pointer; transition: border-color .3s; }
+.shuffle:hover { border-color: var(--accent); }
+.ask { color: var(--accent); border-bottom: 1px solid currentColor; padding-bottom: 1px; transition: color .3s; }
+.ask:hover { color: var(--ink); }
+</style>

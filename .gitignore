@@ -1,11 +1,22 @@
-*.log
-node_modules/*
-*.lock
-package-lock.json
+# Dependencies and build output
+node_modules/
+dist/
+.astro/
+
+# Cloudflare: local dev state and secrets
+.wrangler/
+.dev.vars
+.env
+.env.*
+
+# Local agent and tool settings (machine-specific paths)
+.gemini/
+.claude/settings.local.json
+.impeccable/config.local.json
+.impeccable/hook.cache.json
+
+# OS, editors, logs
 .DS_Store
-
-
-!node_modules/@lekoarts*
-.cache
-**/.cache
-public
+.vscode/
+.idea/
+*.log

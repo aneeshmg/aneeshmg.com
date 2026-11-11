@@ -1,0 +1,69 @@
+---
+import Base from "../layouts/Base.astro";
+import Dial from "../components/Dial.astro";
+import Shelf from "../components/Shelf.astro";
+import { book, clips, mailKey, person, practices, roles, socials, tagline } from "../data/site";
+
+const sections = ["Hello", ...practices.map((p) => p.title), "Say hello"];
+const pad = (n: number) => String(n).padStart(2, "0");
+const linkedIn = socials.find((x) => x.label === "LinkedIn")!.href;
+---
+
+<Base scene="shapes">
+  <!-- Annotations for each shape; src/scripts/scene.ts positions them. Decorative: the text says the same. -->
+  <div class="notes" aria-hidden="true">
+    {practices.map((p, k) => p.notes.map((t) => <span class="note" data-k={k + 1}>{t}</span>))}
+  </div>
+  <nav class="progress" aria-label="Sections">
+    {sections.map((s, i) => <a href={`#${i === 0 ? "top" : i === sections.length - 1 ? "hello" : practices[i - 1].id}`}>{s}</a>)}
+  </nav>
+  <p class="count" aria-hidden="true"><b>01</b> / {pad(sections.length)}</p>
+
+  <section class="ch hero" id="top">
+    <div class="txt">
+      <h1 class="rv" aria-label={person.name}>
+        {clips.map((c, i) => (
+          <Fragment>
+            <span class:list={{ m: i === 1 }}>{c.word}<button class="say" type="button" data-src={c.src} aria-label={`Hear how ${c.word} is pronounced`}></button></span>
+            {i === 1 ? <br /> : " "}
+          </Fragment>
+        ))}
+      </h1>
+      <p class="rv">{tagline}</p>
+      <p class="today rv">Today: <span class="role" aria-hidden="true" data-roles={JSON.stringify(roles)}>{roles[0]}</span><span class="sr">{roles.slice(0, -1).join(", ")} and {roles.at(-1)}.</span></p>
+      <p class="cue rv" aria-hidden="true"><i></i>Scroll</p>
+    </div>
+  </section>
+
+  {practices.map((p, i) => (
+    <section class="ch" id={p.id} style={`--c:var(--c-${p.id})`}>
+      <div class="txt">
+        <p class="idx rv" aria-hidden="true"><i></i><b>{pad(i + 2)}</b>Practice</p>
+        <h2 class="rv">{p.title}</h2>
+        <p class="lede rv">{p.lede}</p>
+        <p class="body rv">{p.body}</p>
+        {p.chips && <ul class="spec rv" aria-label={p.chips.label}>{p.chips.items.map((c) => <li>{c}</li>)}</ul>}
+        {p.also && <p class="also rv">{p.also}</p>}
+        {p.id === "author" && (
+          <div class="book rv">
+            <div class="cover-art" role="img" aria-label={`Optimal Living, by ${person.name}`}><b>Optimal Living</b><small>{person.name}</small></div>
+            {!book.buyLinks.length && <p class="k">{book.releaseNote}</p>}
+          </div>
+        )}
+        {p.id === "student" && <Dial />}
+        {p.link && <a class="cta rv" href={p.link.href}>{p.link.label}</a>}
+      </div>
+    </section>
+  ))}
+
+  <section class="ch end" id="hello">
+    <div class="txt">
+      <p class="idx rv" aria-hidden="true"><i></i><b>{pad(sections.length)}</b>Contact</p>
+      <h2 class="rv">Say hello.</h2>
+      <a class="cta rv" href={linkedIn} data-mail={mailKey}>Write to me</a>
+      <ul class="socials rv">{socials.map((s) => <li><a href={s.href} rel="me noopener" target="_blank">{s.label}</a></li>)}</ul>
+      <Shelf />
+      <p class="fine">© {new Date().getFullYear()} {person.name}</p>
+    </div>
+  </section>
+</Base>

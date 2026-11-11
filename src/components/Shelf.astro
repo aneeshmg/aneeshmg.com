@@ -1,0 +1,53 @@
+---
+// Bookshelf: hairline spines; Optimal Living is the one solid spine. All books live in `shelf` (src/data/site.ts);
+// only SHOWN are on the shelf at once: Optimal Living plus a random pick of the rest.
+// The build renders every spine (hidden ones carry `hidden`), so the client can re-pick on each
+// visit and on "Reshelve". Without JS the build-time pick stays.
+import { shelf } from "../data/site";
+
+const SHOWN = 8;
+const tints = ["author", "engineer", "trainer", "maker", "student", ""];
+// Stable size and tint per title, so a given book always looks the same.
+const hash = (t: string) => [...t].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
+// Build-time pick: a seeded shuffle of the rest, so the no-JS shelf still varies between builds.
+let seed = Date.now() % 2147483647;
+const rand = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+const rest = shelf.slice(1).map((_, i) => i + 1).sort(() => rand() - 0.5).slice(0, SHOWN - 1);
+const shown = new Set([0, ...rest]);
+const order = [0, ...rest];
+const spines = shelf.map((b, i) => {
+  const h = hash(b.title);
+  return { ...b, i, height: 112 + (h % 34), width: 30 + ((h >> 4) % 10), tint: i === 0 ? "author" : tints[(h >> 8) % tints.length] };
+});
+// Shown books first, in pick order; hidden ones after.
+const sorted = [...order.map((i) => spines[i]), ...spines.filter((s) => !shown.has(s.i))];
+const first = shelf[0];
+---
+
+<div class="shelf-wrap rv" data-shown={SHOWN}>
+  <p class="k">From the shelf</p>
+  <div class="shelf-row">
+    <ul class="shelf" aria-label="Books, use arrow keys to browse">
+      {sorted.map((b) => (
+        <li hidden={!shown.has(b.i)} data-i={b.i}>
+          <button
+            class:list={["spine", { own: b.i === 0 }]}
+            type="button"
+            tabindex={b.i === 0 ? 0 : -1}
+            style={`--h:${b.height}px;--w:${b.width}px${b.tint ? `;--c:var(--c-${b.tint})` : ""}`}
+            data-title={b.title} data-author={b.author} data-note={b.note ?? ""}
+            aria-label={`${b.title} by ${b.author}`}
+          ><span class="cv"><span class="ttl">{b.title}</span></span></button>
+        </li>
+      ))}
+    </ul>
+  </div>
+  <div class="shelf-foot">
+    <div class="card" aria-live="polite">
+      <p class="bt">{first.title}</p>
+      <p class="ba">{first.author}</p>
+      <p class="bn">{first.note ?? ""}</p>
+    </div>
+    <button class="reshelve" type="button">Reshelve</button>
+  </div>
+</div>

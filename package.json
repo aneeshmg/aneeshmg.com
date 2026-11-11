@@ -1,32 +1,28 @@
 {
-  "private": true,
   "name": "aneeshmg.com",
-  "description": "Source code of my website",
-  "version": "0.0.25",
-  "author": "Aneesh Gangadhar",
-  "license": "MIT",
-  "starter-name": "gatsby-starter-portfolio-cara",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
-    "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "dev": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
-    "@lekoarts/gatsby-theme-cara": "^1.1.1",
-    "gatsby": "^2.13.72",
-    "gatsby-plugin-google-analytics": "^2.1.8",
-    "gatsby-plugin-manifest": "^2.2.6",
-    "gatsby-plugin-netlify": "^2.1.6",
-    "gatsby-plugin-offline": "^2.2.7",
-    "gatsby-source-filesystem": "^4.10.1",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "@astrojs/sitemap": "^3.7.4",
+    "@fontsource-variable/albert-sans": "^5.3.0",
+    "astro": "^7.4.2",
+    "lenis": "^1.1.13",
+    "three": "^0.170.0"
   },
   "devDependencies": {
-    "cross-env": "^5.2.0"
+    "@astrojs/check": "^0.9.12",
+    "@types/three": "^0.170.0",
+    "typescript": "^6.0.3",
+    "wrangler": "^4.153.0"
+  },
+  "allowScripts": {
+    "workerd@1.20261023.1": true,
+    "esbuild@0.28.2": true
   }
 }
